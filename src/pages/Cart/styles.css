@@ -1,0 +1,50 @@
+.cart-header {
+  padding-top: 0.5rem;
+}
+
+.orders {
+  margin: 1rem 0 0 0;
+  min-height: calc(100vh - 15rem);
+}
+
+.orders-heading {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.orders-total {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.orders-heading {
+  margin-bottom: 5.5rem;
+  border-bottom: 2px solid rgb(197, 52, 52);
+}
+
+.orders-total {
+  text-align: right;
+  border-top: 2px solid rgb(197, 52, 52);
+  margin-left: auto;
+  margin-top: 3rem;
+}
+
+.buttton {
+  border-radius: 3px;
+  border: none;
+  background-color: red;
+  color: white;
+  transition: all 0.3s ease;
+  margin-left: 550px;
+}
+.buttton:hover{
+  transform: rotate(360deg);
+  transform: scale(1.01);
+  color: green;
+}
+
