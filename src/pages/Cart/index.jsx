@@ -6,15 +6,22 @@ import Navbar from '../../components/common/Navbar';
 import './styles.css';
 import {useRecoilState} from 'recoil';
 import {globalCart} from "../../components/Atoms/cartAtom";
+import { useHistory } from "react-router-dom";
+
 
 const Cart = () => {
   const [cart,setCart] = useRecoilState(globalCart);
   const menuRef = useRef(null);
+  const history = useHistory();
+
 
   const handleSubmit = ()=>{
     localStorage.setItem('order', JSON.stringify(cart));
 
     alert('Your order is submitted!');
+    window.location.reload(true);
+
+    history.push('/')
   }
   
   return (
@@ -35,7 +42,7 @@ const Cart = () => {
             setCart={setCart}
             />
           </div>
-          <h3 className='orders-total'>Your Total ${cart?.total_amt}</h3>
+          <h3 className='orders-total'>Your Total Order Value is =${cart?.total_amt}</h3>
           <button className='buttton' onClick={handleSubmit}>Submit Order</button>
         </div>
       )}
