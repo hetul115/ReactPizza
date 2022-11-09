@@ -1,4 +1,3 @@
-import { createRouteLoader } from 'next/dist/client/route-loader';
 import React,{useRef} from 'react';
 import EmptyCart from '../../components/Cart/Carts';
 import Menu from '../../components/common/Menu';
